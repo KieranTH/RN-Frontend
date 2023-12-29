@@ -8,9 +8,7 @@ export type SettingsRouteProps = {
     source?: string
 }
 
-interface Props extends NativeStackScreenProps<RootStackParamList, 'Settings'> {
-
-}
+interface Props extends NativeStackScreenProps<RootStackParamList, 'Settings'> {}
 
 const Settings = ({navigation, route}: Props) => {
     const params = route.params;

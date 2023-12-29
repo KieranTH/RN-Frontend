@@ -11,9 +11,7 @@ export type HomeRouteProps = {
 
 }
 
-interface Props extends NativeStackScreenProps<RootStackParamList, 'Home'> {
-
-}
+interface Props extends NativeStackScreenProps<RootStackParamList, 'Home'>{}
 
 const Home = ({navigation}: Props) => {
     return (

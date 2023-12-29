@@ -7,9 +7,7 @@ export type ModalRouteProps = {
 
 }
 
-interface Props extends NativeStackScreenProps<RootStackParamList, 'Modal'> {
-
-}
+interface Props extends NativeStackScreenProps<RootStackParamList, 'Modal'> {}
 
 const Modal = ({}: Props) => {
     return (
