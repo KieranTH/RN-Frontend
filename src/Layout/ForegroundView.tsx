@@ -1,20 +1,19 @@
 import clsx from "clsx"
 import { View } from "react-native"
+import { StyledCompsProps } from "../type"
+import { classMerger } from "../utils"
 
-type ForegroundViewProps = {
+type ForegroundViewProps = StyledCompsProps & {
     children: React.ReactNode
-    className?: string
 }
-const ForegroundView = ({children, className: cN}: ForegroundViewProps) => {
+const ForegroundView = ({cN, children, style}: ForegroundViewProps) => {
 
-    const d = "bg-foreground flex items-center flex-col gap-5 p-10 h-full"
+    const d = "bg-foreground relative py-3 px-5"
 
-    const className = clsx(
-        d,
-        cN
-    )
+    const className = classMerger(d, cN)
+
     return (
-        <View className={className}>
+        <View className={className} style={style}>
             {children}
         </View>
     )

@@ -1,18 +1,16 @@
-import clsx from "clsx"
 import { View } from "react-native"
+import { classMerger } from "../utils"
 
 type BackgroundViewProps = {
     children: React.ReactNode
-    className?: string
+    cN?: string
 }
-const BackgroundView = ({children, className: cN}: BackgroundViewProps) => {
+const BackgroundView = ({children, cN}: BackgroundViewProps) => {
 
-    const d = "bg-background flex items-center flex-col gap-5 p-10 h-full"
+    const d = "bg-background h-full flex-1 relative p-4"
 
-    const className = clsx(
-        d,
-        cN
-    )
+    const className = classMerger(d, cN)
+    
     return (
         <View className={className}>
             {children}

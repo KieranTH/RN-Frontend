@@ -19,15 +19,17 @@ const Settings = ({navigation, route}: Props) => {
             </Text>
             <StyledButton
                 title="Go to Home"
-                onPress={() =>
+                pressOptions={{
+                    onPress: () =>
                     navigation.navigate('Home')
-                }
+                }}
             />
             <StyledButton
                 title="Go Back"
-                onPress={() =>
+                pressOptions={{
+                    onPress: () =>
                     navigation.goBack()
-                }
+                }}
             />
         </BackgroundView>
     )

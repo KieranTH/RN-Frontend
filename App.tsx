@@ -2,13 +2,14 @@ import 'react-native-gesture-handler'
 
 import React from 'react';
 
-import "./styles.css"
+// import "./styles.css"
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Home, Settings} from './src/Pages';
 import { HomeRouteProps } from './src/Pages/Home';
 import { SettingsRouteProps } from './src/Pages/Settings';
 import Modal, { ModalRouteProps } from './src/Layout/Modal';
+import { StatusBar } from 'react-native';
 
 export type RootStackParamList = {
   Home: HomeRouteProps,
@@ -21,6 +22,10 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export default function App() {
   return (
     <NavigationContainer>
+      <StatusBar
+        animated={true}
+        backgroundColor="#61dafb"
+      />
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen
           name="Home"
